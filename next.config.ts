@@ -2,9 +2,6 @@ import { withSentryConfig } from '@sentry/nextjs';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  experimental: {
-    esmExternals: 'loose',
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -22,6 +19,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     ppr: 'incremental',
+    esmExternals: false,
   },
   devIndicators: {
     appIsrStatus: true,
